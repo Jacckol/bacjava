@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(ApiRoutes.ESTACIONES)
+@RequestMapping(ApiRoutes.ESTACION)
 public class EstacionController {
 
     @Autowired

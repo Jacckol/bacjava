@@ -10,7 +10,7 @@ public final class ApiRoutes {
     public static final String BEACONS = BASE + "/beacons";
     public static final String BICICLETA_INVENTARIO = BASE + "/inventario";
     public static final String CLIENTES = BASE + "/clientes";
-    public static final String ESTACIONES = BASE + "/estaciones";
+    public static final String ESTACION = BASE + "/estacion";
     public static final String MANTENIMIENTOS = BASE + "/mantenimientos";
     public static final String PARTICIPANTES = BASE + "/participantes";
     public static final String PERSONAL = BASE + "/personal";

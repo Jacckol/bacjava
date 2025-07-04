@@ -3,7 +3,7 @@ package com.example.mikro.model.mongo;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "estaciones")
+@Document(collection = "estacion")
 public class EstacionMongo {
 
     @Id

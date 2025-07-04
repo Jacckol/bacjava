@@ -20,7 +20,13 @@ public class EstacionService {
     private EstacionMongoRepository mongoRepository;
 
     public EstacionPostgres crear(EstacionDTO dto) {
-        EstacionPostgres p = new EstacionPostgres(dto.getNombre(), dto.getUbicacion());
+        // Usa los valores reales de capacidad y estado
+        EstacionPostgres p = new EstacionPostgres(
+            dto.getNombre(),
+            dto.getUbicacion(),
+            dto.getCapacidad(),
+            dto.getEstado()
+        );
         EstacionPostgres saved = postgresRepository.save(p);
 
         EstacionMongo m = new EstacionMongo();
@@ -46,6 +52,8 @@ public class EstacionService {
                 .map(p -> {
                     p.setNombre(dto.getNombre());
                     p.setUbicacion(dto.getUbicacion());
+                    p.setCapacidad(dto.getCapacidad()); // actualiza capacidad
+                    p.setEstado(dto.getEstado());       // actualiza estado
                     return postgresRepository.save(p);
                 }).orElseThrow(() -> new RuntimeException("Estación no encontrada"));
 
